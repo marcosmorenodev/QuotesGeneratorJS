@@ -120,11 +120,14 @@ main {
 }
 
 #current-category {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: bold;
     text-transform: capitalize;
 }
 
+.category__span {
+    color: rgb(253, 95, 95);
+}
 
 #copy-btn, #random-quote-btn {
     height: 50px;

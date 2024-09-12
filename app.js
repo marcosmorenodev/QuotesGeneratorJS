@@ -50,9 +50,10 @@ function createQuoteEl(data) {
     randomQuoteBtn.addEventListener("click", fetchRandomQuote);
 
     //And now, it populates their textContent
-    currentCategoryEl.textContent = `Current category: ${category}`;
+    currentCategoryEl.innerHTML = `Current category: <span class="category__span">${category}</span>`;
     quoteEl.textContent = quote;  
     authorEl.textContent = author;
+    
     copyBtn.addEventListener("click", copyText);
 }
 
