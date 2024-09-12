@@ -31,6 +31,7 @@ async function fetchQuote(chosenCategory) {
         const generatedQuote = await res.json();
         
         createQuoteEl(generatedQuote);
+        copyBtn.innerHTML = `<i class="fa-regular fa-paste"></i>`; //Resets the innerHTML in case the user previously copied the quote
     }
 
     catch(err) { checkForError(err.message); }
@@ -107,7 +108,11 @@ async function copyText() {
     
     const text = `"${quote}" ${author ? `\n-${author}` : "Unknown"}`;
 
-    try { await navigator.clipboard.writeText(text); }
+    try { 
+        await navigator.clipboard.writeText(text);
+        
+        copyBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+    }
     
     catch (err) { checkForError(new Error(err.message)); }
 }

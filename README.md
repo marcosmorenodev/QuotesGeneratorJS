@@ -5,3 +5,5 @@ You can get it here: https://marketplace.visualstudio.com/items?itemName=ritwick
 -The "New Quote" button which will automatically generate new random quotes on click from the selected category until it's changed.
 -The "Generate Random Quote" button which will randomize and generate a random quote from the newly (random) selected category on click.
 -And the "Copy" button for which the user can use to copy the generated quote on click.
+
+Note: I'm not responsible for any potentially offensive quote. Contact the API developer/s for any problems.
