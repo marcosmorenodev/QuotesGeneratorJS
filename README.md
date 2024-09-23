@@ -20,5 +20,4 @@ You can get it here: https://marketplace.visualstudio.com/items?itemName=ritwick
     - Enough to say that in order to provide a seamless dynamic content generation experience, the DOM must suffer quite a lot of changes at once, namely, class removal and adding as well as "textContent" updating. See the "createQuoteEl" function for a concrete example.
 
 [!NOTE]
-
 I'm **__not__** responsible for **__any potentially offensive__** quote/s. Contact the API developer/s regarding it.
