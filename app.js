@@ -38,18 +38,20 @@ async function fetchQuote(chosenCategory) {
 }
 
 function createQuoteEl(data) {
-    const {quote, author, category} = data[0]; //* The res itself is an array
+    const {quote, author, category} = data[0]; //* The res itself is an array!
 
-    //Uncovers all the important elements
+    //*=== DOM Updating Section ===*//
     currentCategoryContainer.classList.remove("hidden");
     quoteEl.classList.remove("hidden");
     authorEl.classList.remove("hidden");
+    
     copyBtn.classList.remove("hidden");
     categorySelection.classList.add("hidden");
     randomQuoteBtn.classList.remove("hidden");
     randomQuoteBtn.addEventListener("click", fetchRandomQuote);
+    //*=== DOM Updating Section ===*//
 
-    //And now, it populates their textContent
+    //Quote's textContext is populated
     currentCategoryEl.innerHTML = `Current category: <span class="category__span">${category}</span>`;
     quoteEl.textContent = quote;  
     authorEl.textContent = author;
@@ -74,6 +76,7 @@ function checkForError(err) {
 
 function appendError(errorEl) {
     removeQuoteEl();
+
     quoteContainer.insertAdjacentElement("afterbegin", errorEl);
 }
 
@@ -124,7 +127,7 @@ newQuoteBtn.addEventListener("click", () => {
     fetchQuote(category); 
 });
 
-// ===== Tooltips =====
+//===== Tooltips =====//
 
 tippy(newQuoteBtn, {
     content: "Generates a random quote from the selected category",
